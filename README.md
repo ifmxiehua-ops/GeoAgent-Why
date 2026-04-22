@@ -84,5 +84,5 @@ git push
 5.实时反馈：在执行过程中，请通过日志滚动展示 ArcPy 的处理进度。
 
 
-![GeoAgent-Pro 运行截图](D:\mygis\展示1.jpg)
+![GeoAgent-Pro 运行截图](D:\mygis\展示1.png)
 
