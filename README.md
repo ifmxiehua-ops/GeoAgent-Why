@@ -1,7 +1,9 @@
 🌍 GeoAgent-Pro: 智能海洋空间处理 Agent 平台
 GeoAgent-Pro 是一个面向海洋科学领域的智能空间分析平台。它通过大型语言模型（LLM）的函数调用（Function Calling）
 技术，打通了自然语言与硬核 GIS 引擎（ArcPy）之间的壁垒。用户无需编写代码或操作复杂的工具条，只需通过对话即可完成海量海洋数据的空间裁剪、转换与分析。
+
 🌟 核心特性
+
 💬 语义化空间调度：深度集成 Gemini 2.5 Flash，精准理解“裁剪”、“提取”、“过滤”等空间操作意图。
 
 ⚙️ 跨环境执行中枢：独创的 agent_core 架构，完美解决了常规 Python Web 环境与 ArcGIS 专属 Python 环境（arcgispro-py3）的隔离问题。
