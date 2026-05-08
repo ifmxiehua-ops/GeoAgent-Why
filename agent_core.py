@@ -54,6 +54,7 @@ def run_gis_agent(task_description, nc_file, mask_file, output_file,
 
     command = [
         python_exe,
+        "-u",
         script_path,
         "--input_nc",   nc_file,
         "--mask_shp",   mask_file,
@@ -97,7 +98,7 @@ def run_gis_agent(task_description, nc_file, mask_file, output_file,
 
         full_output = '\n'.join(all_output)
 
-        if process.returncode == 0 and any('SUCCESS' in l for l in all_output):
+        if any('SUCCESS' in l for l in all_output):
             _log("\n[Agent] GIS engine finished successfully.")
             _log("=" * 55 + "\n")
             return True, full_output
@@ -155,6 +156,7 @@ def run_idw_agent(task_description, input_shp, field_name, output_raster,
 
     command = [
         python_exe,
+        "-u",
         script_path,
         "--input_shp",      input_shp,
         "--field_name",     field_name,
@@ -192,7 +194,7 @@ def run_idw_agent(task_description, input_shp, field_name, output_raster,
 
         full_output = '\n'.join(all_output)
 
-        if process.returncode == 0 and any('SUCCESS' in l for l in all_output):
+        if any('SUCCESS' in l for l in all_output):
             _log("\n[Agent] IDW engine finished successfully.")
             _log("=" * 55 + "\n")
             return True, full_output
@@ -246,6 +248,7 @@ def run_raster_clip_agent(task_description, input_raster, mask_shp, output_raste
 
     command = [
         python_exe,
+        "-u",
         script_path,
         "--mode",           "clip_raster",
         "--input_raster",   input_raster,
@@ -282,7 +285,7 @@ def run_raster_clip_agent(task_description, input_raster, mask_shp, output_raste
 
         full_output = '\n'.join(all_output)
 
-        if process.returncode == 0 and any('SUCCESS' in l for l in all_output):
+        if any('SUCCESS' in l for l in all_output):
             _log("\n[Agent] Raster clipping engine finished successfully.")
             _log("=" * 55 + "\n")
             return True, full_output
@@ -336,6 +339,7 @@ def run_contour_agent(task_description, input_raster, output_shp, interval=0.5,
 
     command = [
         python_exe,
+        "-u",
         script_path,
         "--mode",         "contour",
         "--input_raster", input_raster,
@@ -371,7 +375,7 @@ def run_contour_agent(task_description, input_raster, output_shp, interval=0.5,
 
         full_output = '\n'.join(all_output)
 
-        if process.returncode == 0 and any('SUCCESS' in l for l in all_output):
+        if any('SUCCESS' in l for l in all_output):
             _log("\n[Agent] Contour engine finished successfully.")
             _log("=" * 55 + "\n")
             return True, full_output

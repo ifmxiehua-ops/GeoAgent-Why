@@ -123,9 +123,14 @@ def process_single_step(nc, x_coords, y_coords, step_idx, mask_polygon,
     arr = np.empty(len(x_coords), dtype=dtype)
     arr['X'] = x_coords
     arr['Y'] = y_coords
-    
+
     for field_name in var_fields:
         arr[field_name] = data_dict[field_name]
+
+    # 剔除陆地无效点（第一个数据变量为 -9999.0 的行），避免 IDW 插值时极端值导致 ArcPy 崩溃
+    valid_mask = arr[var_fields[0]] != -9999.0
+    arr = arr[valid_mask]
+    print(f"   [filter] {int(valid_mask.sum())}/{len(valid_mask)} valid points after removing -9999 nodes")
 
     # 生成临时 shp，然后裁剪
     if arcpy.Exists(temp_path):

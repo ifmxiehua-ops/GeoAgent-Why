@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="zh"><Esri><CreaDate>20260508</CreaDate><CreaTime>10472700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="d:\mygis\arcgis\Resources\ArcToolbox\toolboxes\Spatial Analyst Tools.tbx\Contour" Date="20260508" Time="104728">Contour D:\mygis\GeoAgent-Pro\result\Hs_idw_masked_clipped.tif D:\mygis\GeoAgent-Pro\result\Hs_contour.shp 0.5 0 1 CONTOUR #</Process></lineage></DataProperties></Esri><contour_type>CONTOUR</contour_type></metadata>
