@@ -83,8 +83,8 @@ streamlit run app.py
 输入指令：
 
 1.读取 D:\mygis\data\海浪SWAN模式数据\Wave_2.nc，使用 MaskPolygon.shp 进行空间裁剪，提取有效波高 Hs，结果保存到 D:\mygis\test_res。
-2.对 D:\mygis\GeoAgent-Pro\result\ai_output_step000.shp 做 IDW 插值，字段名 Hs，用掩膜 D:\mygis\data\海浪SWAN模式数据\掩膜多边形\MaskPolygon.shp 裁剪，结果保存为 D:\mygis\result_res\Hs_idw.tif
-3.对 D:\mygis\GeoAgent-Pro\result\Hs_idw_masked_clipped.tif 提取等值线，间距 0.5，结果保存为 D:\mygis\result_res\Hs_contour.shp
+2.对 D:\mygis\GeoAgent-Pro\result\ai_output_step000.shp 做 IDW 插值，字段名 Hs，用掩膜 D:\mygis\data\海浪SWAN模式数据\掩膜多边形\MaskPolygon.shp 裁剪，结果保存为 D:\mygis\test_res\Hs_idw.tif
+3.对 D:\mygis\GeoAgent-Pro\result\Hs_idw_masked_clipped.tif 提取等值线，间距 0.5，结果保存为 D:\mygis\test_res\Hs_contour.shp
 
 <img width="1437" height="870" alt="展示1" src="https://github.com/user-attachments/assets/582b660b-a923-4220-a5db-ebf8c76afd84" />
 <img width="1410" height="777" alt="效果四" src="https://github.com/user-attachments/assets/6181051b-df97-4b39-9af5-af556d3175e0" />
